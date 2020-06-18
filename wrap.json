@@ -1,0 +1,20 @@
+{
+  "commitBody": "{{#logJSON.versions}}##[{{version}}]({{url}}) {{date}}\n{{releaseNotes.body}}\n{{/logJSON.versions}}",
+  "packageRules": [
+    {
+      "{{arg0}}": ["{{arg1}}"],
+      "semanticCommitType": "feat",
+      "updateTypes": "major"
+    },
+    {
+      "{{arg0}}": ["{{arg1}}"],
+      "semanticCommitType": "feat",
+      "updateTypes": "minor"
+    },
+    {
+      "{{arg0}}": ["{{arg1}}"],
+      "semanticCommitType": "fix",
+      "updateTypes": "patch"
+    }
+  ]
+}
