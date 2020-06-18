@@ -1,17 +1,19 @@
 {
-  "commitBody": "{{#logJSON.versions}}##[{{version}}]({{url}}) {{date}}\n{{releaseNotes.body}}\n{{/logJSON.versions}}",
   "packageRules": [
     {
+      "extends": ["github>mikebryant/test-preset-wraps:bodyincludesreleasenotes"],
       "{{arg0}}": ["{{arg1}}"],
       "semanticCommitType": "feat",
       "updateTypes": "major"
     },
     {
+      "extends": ["github>mikebryant/test-preset-wraps:bodyincludesreleasenotes"],
       "{{arg0}}": ["{{arg1}}"],
       "semanticCommitType": "feat",
       "updateTypes": "minor"
     },
     {
+      "extends": ["github>mikebryant/test-preset-wraps:bodyincludesreleasenotes"],
       "{{arg0}}": ["{{arg1}}"],
       "semanticCommitType": "fix",
       "updateTypes": "patch"
